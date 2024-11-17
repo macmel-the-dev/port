@@ -17,7 +17,7 @@ add_port() {
 
     echo "${random_port}:${local_port}" >> $PORTS_FILE
 
-    echo "${local_port} is now on 138.68.79.95:${random_port}"
+    echo "${local_port} is now on 94.155.35.63:${random_port}"
 }
 
 remove_port() {
@@ -67,7 +67,7 @@ list_ports() {
     while IFS= read -r line; do
         random_port=$(echo $line | cut -d':' -f1)
         local_port=$(echo $line | cut -d':' -f2)
-        echo "Local port ${local_port} -> Public port ${random_port} (138.68.79.95)"
+        echo "Local port ${local_port} -> Public port ${random_port} (94.155.35.63)"
     done < $PORTS_FILE
 }
 
